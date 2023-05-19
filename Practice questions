@@ -1,0 +1,19 @@
+#Write a python program to print 1 to N natural numbers using a while-loop.
+
+n=int(input("Enter a number"))
+i=1
+while(i<=n):
+  print(i)
+  i+=1  # i=i+1
+  
+ O/p:\
+Enter a number8
+1
+2
+3
+4
+5
+6
+7
+8
+ 
