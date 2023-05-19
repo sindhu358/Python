@@ -1,4 +1,4 @@
-#Write a python program to print 1 to N natural numbers using a while-loop.
+#1.Write a python program to print 1 to N natural numbers using a while-loop.
 
 n=int(input("Enter a number"))
 i=1
@@ -17,3 +17,18 @@ Enter a number8
 7
 8
  
+
+#2.Write a python program to find the sum of the N natural numbers using a while-loop.
+
+n=int(input("Ente a number")
+total=0
+i=0
+while(i<=n):
+  total+=i
+  i+=1
+print(Total)
+
+O/p:
+Enter a number10
+55
+
