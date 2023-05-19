@@ -32,3 +32,63 @@ O/p:
 Enter a number10
 55
 
+
+#3.Write a python program to find the multiplication of the N natural numbers using a while-loop.
+
+n=int(input("Enter a number"))
+total=1
+i=1
+while(i<=n):
+    total*=i
+    i+=1
+
+print(total)
+o/p:
+Enter a number5
+120
+
+#4.Iterate in list using while loop
+
+list=["hello","Hi","loop",12,23,,26.5]
+i=0
+while(i<len(list)):
+  print(list[i])
+  i+=1
+o/p:hello
+Hi
+loop
+12
+23
+26.5
+
+#5.Iterate in String using while loop
+string='allinpython'
+
+j=0
+while j<len(string):
+    print(string[j])
+    j+=1
+o/p:a
+l
+l
+i
+n
+p
+y
+t
+h
+o
+n
+
+#6.Iterate in tuple using while loop
+
+Tuple= ('saurabh',19,'allinpython.com')
+i=0
+while(i<len(Tuple)):
+    print(Tuple[i])
+    i+=1
+    
+O/p:
+saurabh
+19
+allinpython.com
