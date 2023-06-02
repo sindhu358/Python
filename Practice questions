@@ -116,6 +116,27 @@ Enter a number6
 
 #2.Write python program to print sum of 1 to N natural number using for loop
 
+n= int(input("Enter a number"))
+sum = 0
+for i in range(1,n+1):
+    sum +=i
+print(sum)
+
+o/p:
+Enter a number10
+55
+
+#3.Write a python program to print factorial of N natural number using for loop
+n =int(input("Enter a number"))
+factorial = 1
+for i in range(1,n+1):
+    factorial=factorial*i
+print(factorial)
+    
+  o/P:Enter a number4
+24
+
+#4.
 
 
 
