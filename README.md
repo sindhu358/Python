@@ -97,10 +97,30 @@ sum: 12
   ```
   o/p:
   ```
-Enter multiple values:
-2 3
-product: 6.0
-```
+  Enter multiple values:
+  2 3
+  product: 6.0
+  ```
+
+  - Using list Comprehension
+
+  EX:
+  ```
+  a = [int(a) for a in input("Enter multiple inputs\n").split()]
+  print("Enter a value:",a)
+  ```
+  o/p:
+
+  ```
+  Enter multiple inputs
+  12 45 66 11 33
+  Enter a value: [12, 45, 66, 11, 33]
+  ```
+
+
+
+ 
+
 
 
 
