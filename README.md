@@ -182,7 +182,7 @@ o/p:
 - IN
 - IS
 ## List
-It is mutable and a collection of no.of strings, floats,etc.
+It is mutable and a collection of no.of strings, floats,etc. and is represented by [].
 
 EX:
 
@@ -195,7 +195,7 @@ o/p:
 
 ```
 ['GEEKS', 'FOR', 'GEEKS']
-``
+```
 
 - len() is used to get the length of list
 - insert()- insert(position,value)
@@ -225,6 +225,69 @@ o/p:
 ```
 
 ## Tuples
+It is immutable. Iterations in tuples is faster than lists for speed of execution and are represented by ().
+
+- count() - It will count the no.of occurence of a number
+- Index() - Find in the tuple and returns the index of the given value where it’s available
+
+## Set
+It is collection of unique elements.They can be useful for removing duplicates from a collection of data.
+
+```
+syntax: s = {1,"s",1.5}
+```
+## Dictionary
+These are represented by {key:value}
+where keys cannot be changed or repeated.Keys are immutable.
+  values can be changed or duplicated
+- get() method is used for accesing the elements in the dict
+    ```
+    dict = {1: "geeks",2:2, 3: "for"}
+    print(dict.get(3))
+    ```
+
+    o/p:
+
+    ```
+    for
+
+    ```
+
+
+EX:
+```
+dict1 = {1: "Python", 2: "Java", 3: "Ruby", 4: "Scala"}
+dict2 = dict1.copy()
+print(dict2)
+dict1.clear()
+print(dict1)
+print(dict2.get(1))
+print(dict2.items())
+print(dict2.keys())
+dict2.pop(4)
+print(dict2)
+dict2.popitem()
+print(dict2)
+dict2.update({3: "Scala"})
+print(dict2)
+print(dict2.values())
+```
+
+o/p:
+
+```
+{1: 'Python', 2: 'Java', 3: 'Ruby', 4: 'Scala'}
+{}
+Python
+dict_items([(1, 'Python'), (2, 'Java'), (3, 'Ruby'), (4, 'Scala')])
+dict_keys([1, 2, 3, 4])
+{1: 'Python', 2: 'Java', 3: 'Ruby'}
+{1: 'Python', 2: 'Java'}
+{1: 'Python', 2: 'Java', 3: 'Scala'}
+dict_values(['Python', 'Java', 'Scala'])
+```
+
+
 
 
 
