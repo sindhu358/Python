@@ -114,9 +114,89 @@ output
 [ 57 417 800  38]
 
 ```
+numpy.concatenate() function concatenate a sequence of arrays along an existing axis.
 
+EX
 
+```
+import numpy as np
+x = np.array([
+[3,2,4],[2,1,4]])
+y = ([[5,3,9],[3,1,4]])
+new = np.concatenate((x,y))
+print(new)
 
+```
+OUTPUT
+
+```
+[[3 2 4]
+ [2 1 4]
+ [5 3 9]
+ [3 1 4]]
+
+```
+
+EX
+
+```
+
+import numpy as np
+
+x = np.array([[3,2,4],[2,1,4],[1,3,5],[1,3,5]])
+new = np.reshape(x, (2,3,2)) # depth,rows,columns
+print(new)
+
+```
+
+op
+
+```
+[[[3 2]
+  [4 2]
+  [1 4]]
+
+ [[1 3]
+  [5 1]
+  [3 5]]]
+
+```
+EX
+
+```
+
+import numpy as np
+
+x = np.array([[3,2,4],[2,1,4],[1,3,5],[1,3,5]])
+three_D = np.reshape(x, (2,3,2))# size,rows,col
+two_D = np.reshape(x,(2,6))# rows,col
+negative = np.reshape(x,(6,-1)) # -1 will automatically sets the column ratio
+
+print("The 3_D array is :",three_D,)
+print("The 2_D array is:",two_D)
+print("The array that sets itself:",negative)
+
+```
+OP
+
+```
+The 3_D array is : [[[3 2]
+  [4 2]
+  [1 4]]
+
+ [[1 3]
+  [5 1]
+  [3 5]]]
+The 2_D array is: [[3 2 4 2 1 4]
+ [1 3 5 1 3 5]]
+The array that sets itself: [[3 2]
+ [4 2]
+ [1 4]
+ [1 3]
+ [5 1]
+ [3 5]]
+
+```
 
 # PANDAS
 To manipulate data i.e., Tabular data such as spreadsheets or SQL tables
