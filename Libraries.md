@@ -1,3 +1,123 @@
+# NUMPY
+
+```
+import numpy as np
+
+x = np.array(
+[3,2,4],
+)
+y = ([5,3,9])
+print(x.shape) #size,type of dimensionalarray
+print(x.dtype) # datatype
+print(np.dot(x,y))
+print((x*y).sum())
+
+```
+output
+
+```
+(3,)
+int64
+57
+57
+```
+
+EX
+
+```
+import numpy as np
+
+x = np.array([
+[3,2,4],
+[24,33,22],
+[34,45,55],
+[1,2,3]])
+y = ([5,3,9])
+print(x.shape) #size,type of dimensionalarray
+print(x.dtype) # datatype
+print(np.dot(x,y)) # matrix multiplication
+print((x*y).sum())
+
+```
+
+output
+
+```
+(4, 3)
+int64
+[ 57 417 800  38]
+1312
+```
+
+EX
+
+```
+import numpy as np
+arr1 = list(range(1000000))
+arr2 = list(range(1000000,2000000))
+x = np.array(arr1)
+y = np.array(arr2)
+
+result = 0
+for x1,x2 in zip(x,y):
+    result += x1*x2
+print(result)
+
+```
+
+output
+
+```
+833332333333500000
+
+```
+EX
+
+```
+import numpy as np
+arr1 = list(range(1000000))
+arr2 = list(range(1000000,2000000))
+x = np.array(arr1)
+y = np.array(arr2)
+
+result = np.dot(x,y)
+print(result)
+
+```
+
+output
+
+```
+833332333333500000
+
+```
+EX
+
+```
+
+import numpy as np
+
+x = np.array([
+[3,2,4],
+[24,33,22],
+[34,45,55],
+[1,2,3]])
+y = ([5,3,9])
+print(np.matmul(x,y))
+print(x @ y)
+
+```
+output
+
+```
+[ 57 417 800  38]
+[ 57 417 800  38]
+
+```
+
+
+
+
 # PANDAS
 To manipulate data i.e., Tabular data such as spreadsheets or SQL tables
 This is mainly used as input for plotting functions in **Matplotlib**, statistical analysis in Scipy,etc
@@ -44,5 +164,5 @@ dtype: object
 
 ````
 
-w
+
 
