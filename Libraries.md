@@ -373,6 +373,46 @@ A new directory can be created using **os.makedirs**.
 
 using urllib module we can download some files to the created file
 
+```
+import urllib.request
+urllib.request.urlretrieve(url1,"")
+os.listdir(filename) # checks whether the files were downloaded to the required directory
+
+```
+To open a file we use a builtin function called as **open**
+there are different types of modes as well
+file1 is referred as an object
+ ```
+file1 = open("",mode = 'r')
+
+```
+To read the contents of the file we use the **read** method of the file object
+
+```
+file_contents = file1.read()
+```
+
+To close the file we use
+
+```
+file1.close()
+```
+### Closing files automatically using **with**
+To automatically close a file once we are done with processing it, we can open it using with statement
+
+```
+with open("filename",'r')as file2:
+    file2_contents = file2.read()
+    print(file2_contents)
+```
+### Read a file line by line
+readlines - File object which provide 
+
+
+
+
+
+
 
 
 ```
