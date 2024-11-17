@@ -408,6 +408,101 @@ with open("filename",'r')as file2:
 ### Read a file line by line
 readlines - File object which provide 
 
+```
+withopen("filename",'r') as file3:
+    file3_lines = file3.readlines()
+```
+we will get an output of each line of the file with\n at the end of each line
+In order to remove \n from each line we use **strip()** function
+```
+file3_lines[0].strip()
+```
+This will remove the newline character i.e., \n
+
+#### Processing data from files
+
+Before performing any operations on the data stored in a file, we need to convert the contents of the file one large string into Python data types.
+For the file containing information about loans in CSV format, we can do the following:
+1. Read the file line by line
+2. Parse the first line to get list of the column anmes or headers
+3. Split each remaining line and convert each value intlo float
+4. create a dictionary for each value using headers as keys
+5. create alist of dictionaries to keep track of all the loans
+
+As we perform the same operations for multiple files, it would be useful define a function ``` read_csv ``` to do this. We will aslo define some helper functions to build up the functionality step by step.
+
+``` parse_header ``` takes a line as input and returns a list of column headers.
+
+```
+def parse headers(header_line):
+    return header_line.strip().split(',')
+```
+
+```
+def parse_values(data_line):
+    values = []
+    for item in data_line.strip().split(','):
+        if item == '':
+            values.append(0.0)
+        else:
+            values.append(float(item))
+    return values
+```
+Create a dictionary which takes a list of values and a list of headers as inputs and returns dictionary with the values and keys
+
+```
+def create_item_dict(values,headers):
+    result = {}
+    for value,headers in zip(value,header):
+        result[header] = value
+    return result
+```
+
+Now put it together and define a ```read_csv``` function
+
+```
+def parse headers(header_line):
+    return header_line.strip().split(',')
+def parse_values(data_line):
+    values = []
+    for item in data_line.strip().split(','):
+        if item == '':
+            values.append(0.0)
+        else:
+            values.append(float(item))
+    return values
+def create_item_dict(values,headers):
+    result = {}
+    for value,headers in zip(value,header):
+        result[header] = value
+    return result
+def read_csv(path):
+    result = []
+    #Open the file in read mode
+    with open(path, 'r') as f:
+        # Get a lsit of lines
+        lines = f.readlines()
+        # parse the header
+        headers = parse_headers(lines[0])
+        #Loop over the remaining lines
+        for data_line in lines[1:]:
+            # Parse the values
+            values = parse_values(data_line)
+            # Create a dictionary using values and headers
+            item,_dict = create_item_dict(values,headers)
+            # Add the dictionary to tje result
+            result.append(item_dict)
+    return result
+
+```
+#### Writing to files
+[= 
+
+
+
+
+
+
 
 
 
