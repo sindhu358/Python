@@ -1,0 +1,59 @@
+SQL
+
+
+-- Limit
+SELECT *
+FROM employee_demographics
+order by  age asc
+limit 4,1  -- row offset , row count(skips 1st 3 rows,  only one row should be returned after skipping the initial rows)
+; 
+
+-- ALIASING
+-- It is a way to change the name of the column can also be used in join
+Select gender , Avg(age)  avg_age
+from employee_demographics
+group by gender
+having avg_age > 40;
+
+-- joins
+-- combines 2 tables or more together if they have a common column data
+
+Select dememployee_id, age, occupation 
+from employee_demographics as dem
+Inner Join employee_salary as sal
+	ON employee_demographics.employee_id = employee_salary.employee_id  -- equi join
+    
+;
+
+
+-- Outer join
+
+Select *
+from employee_demographics as dem
+left Join employee_salary as sal
+	ON dem.employee_id = sal.employee_id;
+    
+-- right join
+select * from employee_demographics as dem
+right join employee_salary as sal
+	ON dem.employee_id = sal.employee_id;
+    
+-- self join
+
+select emp1.employee_id as emp_santa,
+emp1.first_name as first_name_santa,
+from employee_salary emp1
+join employee_salary emp2
+	ON emp1.employee_id + 1 = emp2.employee_id
+    ;
+    
+-- JOining multiple tables together
+
+Select * 
+from employee_demographics as dem
+Inner Join employee_salary as sal
+	ON dem.employee_id = sal.employee_id 
+Inner join parks_departments pd
+	on sal.dept_id = pd.department_id;
+
+
